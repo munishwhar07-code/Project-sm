@@ -39,9 +39,8 @@ export function AuthProvider({ children }) {
     });
     const data = await res.json();
     if (res.ok) {
-      localStorage.setItem("nestmate_token", data.token);
-      setToken(data.token);
-      setUser(data.user);
+      alert("Registration successful! Please log in.");
+      return{success: true};
     }
     return data; // return so page can show errors
   };

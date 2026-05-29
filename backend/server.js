@@ -31,7 +31,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173', // Vite dev server
     'https://nestmate-backend-u7gx.onrender.com', // Deployed backend
-    'project-sm-chi.vercel.app', // Deployed frontend
+    'nest-matesm.vercel.app', // Deployed frontend
   ],
   credentials: true
 }));

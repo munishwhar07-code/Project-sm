@@ -1,3 +1,7 @@
+// Load env variables
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -23,12 +27,13 @@ const app = express();
 connectDB();
 
 // Middlewares
-app.use(cors(
-  origin => [
+app.use(cors({
+  origin: [
     'http://localhost:5173', // Vite dev server
     'https://nestmate-frontend-lgwz.onrender.com', // Deployed frontend
-  ]
-));
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

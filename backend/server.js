@@ -21,7 +21,12 @@ const app = express();
 connectDB();
 
 // Middlewares
-app.use(cors());
+app.use(cors(
+  origin => [
+    'http://localhost:5173', // Vite dev server
+    'https://nestmate-frontend-lgwz.onrender.com', // Deployed frontend
+  ]
+));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
-const API = "http://localhost:5000/api";
+const API = "https://nestmate-backend-u7gx.onrender.com/api";
 
 export function AuthProvider({ children }) {
   const [token,   setToken]   = useState(localStorage.getItem("nestmate_token"));

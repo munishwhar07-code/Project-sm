@@ -12,7 +12,9 @@ const bookingRoutes = require("./routes/Bookingroutes");
 const requirementRoutes = require("./routes/Requirementroutes");
 const authRoutes = require("./routes/auth");
 // Load env variables
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 // Initialize app
 const app = express();

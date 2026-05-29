@@ -18,7 +18,7 @@ export default function MyBookingsModal({ onClose }) {
     const token = localStorage.getItem("nestmate_token");
 
     const res = await fetch(
-      "http://localhost:5000/api/bookings/my",
+      "https://nestmate-backend-u7gx.onrender.com/api/bookings/my",
       {
         headers: {
           Authorization: `Bearer ${token}`,

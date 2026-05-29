@@ -43,6 +43,10 @@ app.use("/api/pgs", pgRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/requirements", requirementRoutes);
 app.use("/api/auth", authRoutes);
+
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
 // 404 Handler
 app.use((req, res) => {
   res.status(404).json({

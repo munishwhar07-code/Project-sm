@@ -5,7 +5,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 
-const API = "http://localhost:5000/api";
+const API = "https://nestmate-backend-u7gx.onrender.com/api";
 
 const QUICK_LINKS = [
   { icon:"🏠", label:"Find PG",     desc:"Browse verified PGs near your college" },

@@ -46,6 +46,10 @@ export default function LandingPage() {
     const data = await register(regForm);
     setLoading(false);
     if (!data.success) setError(data.message);
+    else{
+      setError("");
+      setTab("login");
+    }
   };
 
   return (

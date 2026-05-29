@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
           headers: { Authorization: `Bearer ${savedToken}` },
         });
         const data = await res.json();
-        if (res.ok) { setUser(data.user); setToken(savedToken); }
+        if (res.ok) { setUser(data.user); setToken(savedToken); alert("Logged in successfully!");}
         else        { localStorage.removeItem("nestmate_token"); }
       } catch { localStorage.removeItem("nestmate_token"); }
       finally  { setLoading(false); }

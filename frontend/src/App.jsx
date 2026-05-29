@@ -19,7 +19,7 @@ import MyProfile  from "./components/MyProfileModal";
 import { pgAPI } from "./api";
 
 // ── Backend base URL ───────────────────────────────────────────
-const API = "http://localhost:5000/api"; // 
+const API = "https://nestmate-backend-u7gx.onrender.com/api"; // 
 // ── Fallback seed data (shown when backend is offline) ─────────
 const FALLBACK_SEED = [
   { id:1, type:"pg",   name:"Sri Lakshmi PG",     area:"Thiruparankundram", city:"madurai",    price:"₹4,500", tag:"Girls Only",   fresh:98,  rating:"4.7", availableRooms:5,  img:"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80" },

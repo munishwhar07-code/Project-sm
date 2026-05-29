@@ -15,10 +15,6 @@ const pgRoutes = require("./routes/Pgroutes");
 const bookingRoutes = require("./routes/Bookingroutes");
 const requirementRoutes = require("./routes/Requirementroutes");
 const authRoutes = require("./routes/auth");
-// Load env variables
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
 
 // Initialize app
 const app = express();
@@ -31,7 +27,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173', // Vite dev server
     'https://nestmate-backend-u7gx.onrender.com', // Deployed backend
-    'nest-matesm.vercel.app', // Deployed frontend
+    'https://nest-matesm.vercel.app', // Deployed frontend
   ],
   credentials: true
 }));

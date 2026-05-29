@@ -30,7 +30,7 @@ connectDB();
 app.use(cors({
   origin: [
     'http://localhost:5173', // Vite dev server
-    'https://nestmate-frontend-lgwz.onrender.com', // Deployed frontend
+    'project-sm-chi.vercel.app', // Deployed frontend
   ],
   credentials: true
 }));

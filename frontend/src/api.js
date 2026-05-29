@@ -1,7 +1,7 @@
 // ── Central API client ────────────────────────────────────────
 // VITE_API_URL is set to "/api" in .env
 // Vite proxies /api → http://localhost:5000  (see vite.config.js)
-const BASE = import.meta.env.VITE_API_URL || "/api";
+const BASE = import.meta.env.VITE_API_URL || "https://nestmate-backend-u7gx.onrender.com/api";
 
 async function request(path, options = {}) {
   const token = localStorage.getItem("nestmate_token");
